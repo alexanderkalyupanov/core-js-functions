@@ -50,8 +50,12 @@ function getFunctionBody(func) {
  *  ]) => [0, 1, 2]
  *
  */
-function getArgumentsCount(/* funcs */) {
-  throw new Error('Not implemented');
+function getArgumentsCount(funcs) {
+  const mas = [];
+  funcs.forEach((item) => {
+    mas.push(item.length || 0);
+  });
+  return mas;
 }
 
 /**
